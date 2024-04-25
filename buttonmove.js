@@ -1,3 +1,4 @@
+//DROPPED THE JS -> MAYBE SOMEONE WILL FIND IT USEFUL :)
 const myDiv = document.getElementById("myDiv");
 const button = myDiv.querySelector("button");
 
