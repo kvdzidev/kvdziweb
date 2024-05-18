@@ -1,4 +1,4 @@
-//DROPPED THE JS -> MAYBE SOMEONE WILL FIND IT USEFUL :)
+//DROPPED THE JS -> MAYBE SOMEONE WILL FIND IT USEFUL :) (a transformation of the button - running away from the user)
 const myDiv = document.getElementById("myDiv");
 const button = myDiv.querySelector("button");
 
