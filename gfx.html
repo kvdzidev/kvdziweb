@@ -33,17 +33,52 @@
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             margin: 0;
         }
+        #icona{
+            width: 25%;
+            height: 25%;
+            margin: 3px;            
+        }
+        .search-page {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .search-container {
+            width: 50%;
+        }
+        .search-input {
+            width: 110%;
+            padding: 10px;
+            font-size: 18px;
+            border: 1px solid #ccc;
+            border-radius: 25px;
+            box-sizing: border-box;
+        }
     </style>
 </head>
 <body>
     <nav>
         <ul>
+            <li><h3>
+                <!--Remember to style it and make some backend php!!!-->
+                <div class="search-page">
+                    <div class="search-container">
+                        <form action="search_results.php" method="get">
+                            <input type="text" name="query" class="search-input" placeholder="Search...">
+                        </form>
+                    </div>
+            </h3></li>
             <a href="gfx.html"><li><h3>GRAPHICS</h3></li></a>
             <a href="editing.html"><li><h3>EDITING</h3></li></a>
             <a href="writing.html"><li><h3>WRITING</h3></li></a>
             <a href="programming.html"><li><h3>PROGRAMMING</h3></li></a>
             <a href="about.html"><li><h3>ABOUT ME</h3></li></a>
             <a href="contact.html"><li><h3>CONTACT</h3></li></a>
+            <a href="login.html"><li><h3><img src="ikona.png" id="icona"></h3></li></a>
+            <!--Ask how to take out the icon from the UL and adjust it so it is in the same line vertically as the other elements +style it to the top right side with good margins-->
         </ul>
     </nav>
 </body>
