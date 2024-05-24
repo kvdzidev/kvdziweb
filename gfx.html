@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing</title>
     <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: rgb(47, 46, 46);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .content {
+            flex: 1;
+        }
         nav {
             background-color: black;
             position: relative;
@@ -41,11 +55,9 @@
             transform: translateY(-50%); 
             margin-left: 40px;
         }
-
         .search-container {
             width: 60%;
         }
-
         .search-input {
             width: 100%;
             padding: 10px;
@@ -54,7 +66,6 @@
             border-radius: 25px;
             box-sizing: border-box;
         }
-
         #icona {
             position: absolute;
             right: 0;
@@ -68,19 +79,62 @@
             top: 50%;
             transform: translateY(-50%); 
             margin-right: 120px; 
-            
         }
-        #notif:hover{
+        #notif:hover {
             fill: #0bffef;
             transition: color 0.3s;
         }
-        #icona:hover{
-            
-            fill:#0bffef ;
+        #icona:hover {
+            fill: #0bffef;
             transition: color 0.3s;
         }
-        #grx{
+        #grx {
             color: #6561eb;
+        }
+        .footer {
+            width: 100%;
+            background-color: rgb(47, 46, 46);
+            padding: 20px 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0;
+        }
+        .menu__item {
+            list-style: none;
+            margin: 0 15px;
+        }
+        .menu__link {
+            font-size: 1.2rem;
+            color: #fff;
+            display: inline-block;
+            transition: color 0.3s;
+            text-decoration: none;
+            opacity: 0.75;
+            font-weight: 300;
+        }
+        .menu__link:hover {
+            opacity: 1;
+            color: #ffffff;
+        }
+        .footer p {
+            color: #fff;
+            margin: 8px 0 0 0;
+            font-size: 1rem;
+            font-weight: 300;
+            text-align: center;
+        }
+        .footer-line {
+            width: 100%;
+            opacity: 150%;
+            height: 1px;
+            background-color: white;
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -89,7 +143,6 @@
         <ul>
             <li>
                 <h3>
-                    <!--make some backend php!!!-->
                     <div class="search-page">
                         <div class="search-container">
                             <form action="search_results.php" method="get">
@@ -147,5 +200,15 @@
             </a>
         </ul>
     </nav>
+    <div class="content"></div>
+    <footer class="footer">
+        <div class="footer-line"></div>
+        <ul class="menu">
+            <li class="menu__item"><a class="menu__link" href="gfx.html">Home</a></li>    
+            <li class="menu__item"><a class="menu__link" href="linktr.ee/kvdzi">Linktree</a></li>
+            <li class="menu__item"><a class="menu__link" href="contact.html">Contact</a></li>
+        </ul>
+        <p>&copy;2024 | kvdzi</p>
+    </footer>
 </body>
 </html>
