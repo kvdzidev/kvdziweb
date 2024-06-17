@@ -33,6 +33,9 @@
         a:hover {
             color: #0bffef;
         }
+        .boxed a:hover {
+            color: #0bffef;
+        } 
         ul {
             list-style-type: none; 
             display: flex;
@@ -43,7 +46,7 @@
         li {
             margin-right: 40px;
         }
-        h3 {
+        h3, .czcionka {
             font-size: 28px;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             margin: 0;
@@ -136,6 +139,74 @@
             background-color: white;
             margin-bottom: 10px;
         }
+        #elementy{
+            display: flex;
+            margin-top: 280px;
+            margin-left: 288px;
+            margin-right: 190px;
+            margin-bottom: 210px;
+        }
+        .tekscik {
+            color: rgb(255, 255, 255);
+            float: right;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 120px;
+        }
+        .tekscik h3, .tekscik p {
+            animation: color-change 4s infinite;
+        }
+
+        @keyframes color-change {
+            0%, 100% { color: rgb(255, 255, 255); }
+            25% { color: #b9d8f0; }
+            50% { color: #5abfe6; }
+            75% { color: #5aa4d5; }
+        }
+        .boxed{
+            color: #ffffff;
+            justify-content: center;
+            align-items: center;
+            text-align: left;
+            margin: auto 0;
+            margin-left: 200px;
+            margin-bottom: 50px;
+            font-size: large;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            border: #ffffff 3px solid;
+            background-color: rgb(60, 60, 60);
+            border-radius: 5px;
+            padding: 0;
+            width: 35%;
+
+        }
+        .linee {
+            padding-left: 24px;
+            padding-bottom: 10px;
+            padding-top: 10px;
+            border: 1px solid grey;
+        }
+        a.colori:hover {
+            color: #ce4343;
+        }
+        a.colori1:hover {
+            color: #56ce43;
+        }
+        a.colori2:hover {
+            color: #cece43;
+        }
+        a.colori3:hover {
+            color: #8243ce;
+        }
+        a.colori4:hover {
+            color: #43c2ce;
+        }
+        #bigo {
+            font-size: 40px;
+            text-shadow: 2px 2px 3px grey;
+        }
     </style>
 </head>
 <body>
@@ -200,6 +271,32 @@
             </a>
         </ul>
     </nav>
+
+    <div id="elementy">
+        <div class="tekscik">
+            <h3 id="bigo">Explore more of my artwork!</h3>
+<p>Search through my collection to find what interests you. <br>From vibrant graphics to intricate designs, there's something for everyone. <br>Take your time to browse and enjoy the creativity!</p>
+
+        </div>
+        <div class="boxed">
+            <a href="thumbnails.html" class="colori">
+                <p class="linee">Thumbnails ▶</p>
+            </a>
+            <a href="banners.html" class="colori1">
+                <p class="linee">Banners ▶</p>
+            </a>
+            <a href="logos.html" class="colori2">
+                <p class="linee">Logos ▶</p>
+            </a>
+            <a href="flyers.html" class="colori3">
+                <p class="linee" >Flyers ▶</p>
+            </a>
+            <a href="more.html" class="colori4">
+                <p class="linee">More ▶</p>
+            </a>
+        </div>
+    </div>
+
     <div class="content"></div>
     <footer class="footer">
         <div class="footer-line"></div>
