@@ -221,7 +221,7 @@
                     </h3>
                 </li>
             </a>
-            <a href="login.html">
+            <a href="login.php">
                 <li>
                     <h3>
                         <svg id="icona" fill="#ffffff" width="50px" height="50px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -250,6 +250,14 @@
         </form><br>
         <p>If you are in a hurry you can try contacting me on discord: </p>
         <p class="fontin" id="shd"><a href="https://discordapp.com/users/487231285174075392">kvdzi</a></p>
+        <p>I mostly respond within 48h <br><?php
+            $data = getdate();
+            $dzien = $data["mday"];
+            $miesiac = $data["mon"];
+            $rok = $data["year"];
+            echo "Today is: $dzien/$miesiac/$rok ";
+        ?></p>
+
     </div>
 
     <div class="boxed">
