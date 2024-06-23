@@ -24,6 +24,11 @@
             text-align: center;
             justify-content: center;
             margin-bottom: 130px;
+            gap: 50px;
+            margin-top: 130px;
+            font-size: medium;
+            color: black;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
         nav {
             background-color: black;
@@ -145,7 +150,20 @@
             background-color: white;
             margin-bottom: 10px;
         }
-
+        #roundo{
+            border-radius: 230px;
+            box-shadow: 1px 1px 15px rgb(114, 114, 114);
+        }
+        #cc{
+            color: black;
+        }
+        #cc:hover{
+            color: rgb(229, 80, 80);
+        }
+        #headingOne{
+            background-color: rgb(49, 42, 42);
+            color: rgb(49, 42, 42);;
+        }
     </style>
 </head>
 <body>
@@ -211,7 +229,30 @@
         </ul>
     </nav>
     <div class="content">
+        <div>
+            <img id=roundo src="redeye.jpg" style="width: 500px; height: 500px;">
+        </div>
 
+     <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      My history
+                </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Hello there, my name is Jacek, and I've been in love with IT since the youngest years.<br> 
+                    At the beginning I've extremely enjoyed playing games, <br>later - more of creating them - the "behind" the scenes of IT. <br>
+                    I've started with graphics design and video editing back in 2016 in camtasia studio and gimp! <br>
+                    It's been a long adventure since then, where I had the opportunity to work with audio mixing, <br>
+                    writing content, creating youtube videos, making translations, creating simple websites, <br>
+                    writing basic scripts, playing semi-pro, <br>creating and moderating huge discord servers, just like big teamspeak communities, and a lot lot more!<br>
+                    <a href='contact.php' id="cc">Learn more</a>
+                </div>
+                </div>
+        </div>
+        </div>
     </div>
     <footer class="footer">
         <div class="footer-line"></div>
