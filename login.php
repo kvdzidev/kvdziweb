@@ -18,6 +18,11 @@
         }
         .content {
             flex: 1;
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+            position: relative; 
+            gap: 2vw;
         }
         nav {
             background-color: black;
@@ -136,7 +141,6 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            margin: 50px auto 0;
             margin-bottom: 50px;
             font-size: large;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -175,7 +179,8 @@
             border: #ccc 2px solid;
         }
         .registerBox button:hover {
-            background: #0bffef;
+            background: #fff;
+            color: black;
         }
     </style>
 </head>
@@ -242,7 +247,8 @@
         </ul>
     </nav>
     <div class="content">
-    <form class="registerBox" action="register.php" method="post">
+        <div>
+    <form class="registerBox" action="logini.php" method="post">
         <h2>Create your account</h2>
         <label for="firstname">First Name</label>
         <input type="text" id="firstname" name="firstname" required>
@@ -255,33 +261,20 @@
         <br><br>
         <button type="submit">Register</button>
     </form>
-        <?php
-
-            $servername = "localhost";
-            $username = "root";
-            $password = "";
-            $dbname = "mydatabase";
-
-            $conn = new mysqli($servername, $username, $password, $dbname);
-
-            if ($conn->connect_error) {
-                die("Failed to connect with he database: " . $conn->connect_error);
-            }
-            $firstname = $_POST['firstname'];
-            $lastname = $_POST['lastname'];
-            $username = $_POST['username'];
-            $password = $_POST['password'];
-
-            $sql = "INSERT INTO users (firstname, lastname, username, password) VALUES ('$firstname', '$lastname', '$username', '$hashed_password')";
-
-            if ($conn->query($sql) === TRUE) {
-                echo "New person On board!";
-            } else {
-                echo "Error: " . $sql . "<br>" . $conn->error;
-            }
-            $conn->close();
-        ?>
-
+    
+</div>
+    <div class="registerBox">
+            <h2>Log into your Account</h2>
+            <form action="login_process.php" method="post">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                <br><br>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
     </div>
     <footer class="footer">
         <div class="footer-line"></div>
@@ -294,3 +287,4 @@
     </footer>
 </body>
 </html>
+
