@@ -1,8 +1,8 @@
 <?php
-$host = '127.0.0.1';
-$db = 'moja_baza_danych';
-$user = 'root';
-$pass = '';
+$host = 'szuflandia.pjwstk.edu.pl';
+$db = 's30396';
+$user = 's30396';
+$pass = 'Jac.Wojt';
 $charset = 'utf8mb4';
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
