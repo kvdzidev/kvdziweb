@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Landing</title>
     <style>
         * {
@@ -19,16 +18,10 @@
         }
         .content {
             flex: 1;
-            display: flex;
-            align-items: center;
-            text-align: center;
-            justify-content: center;
-            margin-bottom: 130px;
         }
         nav {
             background-color: black;
             position: relative;
-
         }
         a {
             color: white;
@@ -40,6 +33,9 @@
         a:hover {
             color: #0bffef;
         }
+        .boxed a:hover {
+            color: #0bffef;
+        } 
         ul {
             list-style-type: none; 
             display: flex;
@@ -49,10 +45,8 @@
         }
         li {
             margin-right: 40px;
-            padding-top: 26px;
-            font-weight: bold;
         }
-        h3 {
+        h3, .czcionka {
             font-size: 28px;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             margin: 0;
@@ -97,7 +91,7 @@
             fill: #0bffef;
             transition: color 0.3s;
         }
-        #abt {
+        #grx {
             color: #6561eb;
         }
         .footer {
@@ -145,7 +139,74 @@
             background-color: white;
             margin-bottom: 10px;
         }
+        #elementy{
+            display: flex;
+            margin-top: 280px;
+            margin-left: 288px;
+            margin-right: 190px;
+            margin-bottom: 210px;
+        }
+        .tekscik {
+            color: rgb(255, 255, 255);
+            float: right;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 120px;
+        }
+        .tekscik h3, .tekscik p {
+            animation: color-change 4s infinite;
+        }
 
+        @keyframes color-change {
+            0%, 100% { color: rgb(255, 255, 255); }
+            25% { color: #b9d8f0; }
+            50% { color: #5abfe6; }
+            75% { color: #5aa4d5; }
+        }
+        .boxed{
+            color: #ffffff;
+            justify-content: center;
+            align-items: center;
+            text-align: left;
+            margin: auto 0;
+            margin-left: 200px;
+            margin-bottom: 50px;
+            font-size: large;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            border: #ffffff 3px solid;
+            background-color: rgb(60, 60, 60);
+            border-radius: 5px;
+            padding: 0;
+            width: 35%;
+
+        }
+        .linee {
+            padding-left: 24px;
+            padding-bottom: 10px;
+            padding-top: 10px;
+            border: 1px solid grey;
+        }
+        a.colori:hover {
+            color: #ce4343;
+        }
+        a.colori1:hover {
+            color: #56ce43;
+        }
+        a.colori2:hover {
+            color: #cece43;
+        }
+        a.colori3:hover {
+            color: #8243ce;
+        }
+        a.colori4:hover {
+            color: #43c2ce;
+        }
+        #bigo {
+            font-size: 40px;
+            text-shadow: 2px 2px 3px grey;
+        }
     </style>
 </head>
 <body>
@@ -162,13 +223,13 @@
                     </div>
                 </h3>
             </li>
-            <a id="grx" href="gfx.html"><li><h3>GRAPHICS</h3></li></a>
-            <a id="edit" href="editing.html"><li><h3>EDITING</h3></li></a>
-            <a id="wrt" href="writing.html"><li><h3>WRITING</h3></li></a>
-            <a id="prg" href="programming.html"><li><h3>PROGRAMMING</h3></li></a>
-            <a id="abt" href="about.html"><li><h3>REVIEWS</h3></li></a>
-            <a id="cont" href="contact.html"><li><h3>CONTACT</h3></li></a>
-            <a id="noti" href="notif.html">
+            <a id="grx" href="gfx.php"><li><h3>GRAPHICS</h3></li></a>
+            <a id="edit" href="editing.php"><li><h3>EDITING</h3></li></a>
+            <a id="wrt" href="writing.php"><li><h3>WRITING</h3></li></a>
+            <a id="prg" href="programming.php"><li><h3>PROGRAMMING</h3></li></a>
+            <a id="abt" href="about.php"><li><h3>ABOUT ME</h3></li></a>
+            <a id="cont" href="contact.php"><li><h3>CONTACT</h3></li></a>
+            <a id="noti" href="notif.php">
                 <li>
                     <h3>
                         <svg id="notif" fill="#ffffff" height="50px" width="50px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 611.999 611.999" xml:space="preserve">
@@ -210,18 +271,41 @@
             </a>
         </ul>
     </nav>
-    <div class="content">
 
+    <div id="elementy">
+        <div class="tekscik">
+            <h3 id="bigo">Explore more of my artwork!</h3>
+<p>Search through my collection to find what interests you. <br>From vibrant graphics to intricate designs, there's something for everyone. <br>Take your time to browse and enjoy the creativity!</p>
+
+        </div>
+        <div class="boxed">
+            <a href="thumbnails.php" class="colori">
+                <p class="linee">Thumbnails ▶</p>
+            </a>
+            <a href="banners.php" class="colori1">
+                <p class="linee">Banners ▶</p>
+            </a>
+            <a href="logos.php" class="colori2">
+                <p class="linee">Logos ▶</p>
+            </a>
+            <a href="flyers.php" class="colori3">
+                <p class="linee" >Flyers ▶</p>
+            </a>
+            <a href="more.php" class="colori4">
+                <p class="linee">More ▶</p>
+            </a>
+        </div>
     </div>
+
+    <div class="content"></div>
     <footer class="footer">
         <div class="footer-line"></div>
         <ul class="menu">
-            <li class="menu__item"><a class="menu__link" href="gfx.html">Home</a></li>    
+            <li class="menu__item"><a class="menu__link" href="gfx.php">Home</a></li>    
             <li class="menu__item"><a class="menu__link" href="linktr.ee/kvdzi">Linktree</a></li>
-            <li class="menu__item"><a class="menu__link" href="contact.html">Contact</a></li>
+            <li class="menu__item"><a class="menu__link" href="contact.php">Contact</a></li>
         </ul>
         <p>&copy;2024 | kvdzi</p>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

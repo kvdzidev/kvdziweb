@@ -18,6 +18,12 @@
         }
         .content {
             flex: 1;
+            width: 45%;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin:auto;
+            margin-top: 125px;;
         }
         nav {
             background-color: black;
@@ -33,9 +39,6 @@
         a:hover {
             color: #0bffef;
         }
-        .boxed a:hover {
-            color: #0bffef;
-        } 
         ul {
             list-style-type: none; 
             display: flex;
@@ -139,6 +142,43 @@
             background-color: white;
             margin-bottom: 10px;
         }
+        .slider {
+            width: 100%;
+            height: 510px;
+            position: relative;
+        }
+        .slider img {
+            width: 100%;
+            height: 500px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .slider img.active {
+            opacity: 1;
+        }
+        .navigation-button {
+            text-align: center;
+            position: relative;
+        }
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .active,
+        .dot:hover {
+            background-color: #717171;
+        }
+        #ctrn{
+            
+        }
     </style>
 </head>
 <body>
@@ -155,13 +195,13 @@
                     </div>
                 </h3>
             </li>
-            <a id="grx" href="gfx.html"><li><h3>OTHER</h3></li></a>
-            <a id="edit" href="editing.html"><li><h3>EDITING</h3></li></a>
-            <a id="wrt" href="writing.html"><li><h3>WRITING</h3></li></a>
-            <a id="prg" href="programming.html"><li><h3>PROGRAMMING</h3></li></a>
-            <a id="abt" href="about.html"><li><h3>ABOUT ME</h3></li></a>
-            <a id="cont" href="contact.html"><li><h3>CONTACT</h3></li></a>
-            <a id="noti" href="notif.html">
+            <a id="grx" href="gfx.php"><li><h3>THUMBNAILS</h3></li></a>
+            <a id="edit" href="editing.php"><li><h3>EDITING</h3></li></a>
+            <a id="wrt" href="writing.php"><li><h3>WRITING</h3></li></a>
+            <a id="prg" href="programming.php"><li><h3>PROGRAMMING</h3></li></a>
+            <a id="abt" href="about.php"><li><h3>ABOUT ME</h3></li></a>
+            <a id="cont" href="contact.php"><li><h3>CONTACT</h3></li></a>
+            <a id="noti" href="notif.php">
                 <li>
                     <h3>
                         <svg id="notif" fill="#ffffff" height="50px" width="50px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 611.999 611.999" xml:space="preserve">
@@ -176,8 +216,8 @@
                                             C581.586,511.664,577.516,503.6,570.107,500.254z M484.434,439.859c6.837,20.728,16.518,41.544,30.246,58.866H97.32
                                             c13.726-17.32,23.407-38.135,30.244-58.866H484.434z M306.001,34.515c18.945,0,34.963,12.73,39.975,30.082
                                             c-12.912-2.678-26.282-4.09-39.975-4.09s-27.063,1.411-39.975,4.09C271.039,47.246,287.057,34.515,306.001,34.515z
-                                            M143.97,341.736v-84.685c0-89.343,72.686-162.029,162.031-162.029s162.031,72.686,162.031,162.029v84.826
-                                            c0.023,2.596,0.427,29.879,7.303,63.465H136.663C143.543,371.724,143.949,344.393,143.97,341.736z M306.001,577.485
+                                            M143.97,341.736v-84.685c0-89.36,72.726-162.083,162.031-162.083s162.031,72.723,162.031,162.083v84.685
+                                            c0.019,1.67,2.511,134.895,61.393,186.763H82.575C141.459,476.631,143.949,343.406,143.97,341.736z M306.001,577.485
                                             c-26.341,0-49.33-18.992-56.709-44.246h113.416C355.329,558.493,332.344,577.485,306.001,577.485z"/>
                                         <path d="M306.001,119.235c-74.25,0-134.657,60.405-134.657,134.654c0,9.531,7.727,17.258,17.258,17.258
                                             c9.531,0,17.258-7.727,17.258-17.258c0-55.217,44.923-100.139,100.142-100.139c9.531,0,17.258-7.727,17.258-17.258
@@ -189,7 +229,7 @@
                     </h3>
                 </li>
             </a>
-            <a href="login.html">
+            <a href="login.php">
                 <li>
                     <h3>
                         <svg id="icona" fill="#ffffff" width="50px" height="50px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -203,17 +243,30 @@
             </a>
         </ul>
     </nav>
+    <div class="content">
+        
+        <div class="slider">
+            <img id="img-1" src="gonthumbnail.jpg" alt="Image 1" class="active" />
+            <img id="img-2" src="csgothumbnail.png" alt="Image 2" />
+            <img id="img-3" src="fortnitethumbnail.png" alt="Image 3" />
+        </div>
+        <div class="navigation-button">
+            <span class="dot active" onclick="changeSlide(0)"></span>
+            <span class="dot" onclick="changeSlide(1)"></span>
+            <span class="dot" onclick="changeSlide(2)"></span>
+        </div>
+    </div>
 
-
-    <div class="content"></div>
     <footer class="footer">
         <div class="footer-line"></div>
         <ul class="menu">
-            <li class="menu__item"><a class="menu__link" href="gfx.html">Home</a></li>    
+            <li class="menu__item"><a class="menu__link" href="gfx.php">Home</a></li>    
             <li class="menu__item"><a class="menu__link" href="linktr.ee/kvdzi">Linktree</a></li>
-            <li class="menu__item"><a class="menu__link" href="contact.html">Contact</a></li>
+            <li class="menu__item"><a class="menu__link" href="contact.php">Contact</a></li>
         </ul>
         <p>&copy;2024 | kvdzi</p>
     </footer>
+
+    <script src="sliders.js"></script>
 </body>
 </html>

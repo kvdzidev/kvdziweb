@@ -1,8 +1,8 @@
 <?php
-$host = '127.0.0.1';
-$db = 'moja_baza_danych';
-$user = 'root';
-$pass = '';
+$host = 'localhost';
+$db = 'nazwa_bazy_danych';
+$user = 'uzytkownik';
+$pass = 'haslo';
 $charset = 'utf8mb4';
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
@@ -14,7 +14,7 @@ $options = [
 
 try {
     $pdo = new PDO($dsn, $user, $pass, $options);
-} catch (PDOException $e) {
-    throw new PDOException($e->getMessage(), (int)$e->getCode());
+} catch (\PDOException $e) {
+    throw new \PDOException($e->getMessage(), (int)$e->getCode());
 }
 ?>

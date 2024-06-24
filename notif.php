@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Landing</title>
     <style>
         * {
@@ -19,16 +18,10 @@
         }
         .content {
             flex: 1;
-            display: flex;
-            align-items: center;
-            text-align: center;
-            justify-content: center;
-            margin-bottom: 130px;
         }
         nav {
             background-color: black;
             position: relative;
-
         }
         a {
             color: white;
@@ -49,8 +42,6 @@
         }
         li {
             margin-right: 40px;
-            padding-top: 26px;
-            font-weight: bold;
         }
         h3 {
             font-size: 28px;
@@ -97,9 +88,6 @@
             fill: #0bffef;
             transition: color 0.3s;
         }
-        #abt {
-            color: #6561eb;
-        }
         .footer {
             width: 100%;
             background-color: rgb(47, 46, 46);
@@ -145,14 +133,6 @@
             background-color: white;
             margin-bottom: 10px;
         }
-        .btn-xl {
-            padding: 3rem 6rem; 
-            font-size: 4rem;
-            border-radius: 1rem; 
-        }
-        .btn-spacin {
-            margin-right: 5px;
-        }
     </style>
 </head>
 <body>
@@ -169,13 +149,13 @@
                     </div>
                 </h3>
             </li>
-            <a id="grx" href="gfx.html"><li><h3>GRAPHICS</h3></li></a>
-            <a id="edit" href="editing.html"><li><h3>EDITING</h3></li></a>
-            <a id="wrt" href="writing.html"><li><h3>WRITING</h3></li></a>
-            <a id="prg" href="programming.html"><li><h3>PROGRAMMING</h3></li></a>
-            <a id="abt" href="about.html"><li><h3>ABOUT ME</h3></li></a>
-            <a id="cont" href="contact.html"><li><h3>CONTACT</h3></li></a>
-            <a id="noti" href="notif.html">
+            <a id="grx" href="gfx.php"><li><h3>GRAPHICS</h3></li></a>
+            <a id="edit" href="editing.php"><li><h3>EDITING</h3></li></a>
+            <a id="wrt" href="writing.php"><li><h3>WRITING</h3></li></a>
+            <a id="prg" href="programming.php"><li><h3>PROGRAMMING</h3></li></a>
+            <a id="abt" href="about.php"><li><h3>ABOUT ME</h3></li></a>
+            <a id="cont" href="contact.php"><li><h3>CONTACT</h3></li></a>
+            <a id="noti" href="notif.php">
                 <li>
                     <h3>
                         <svg id="notif" fill="#ffffff" height="50px" width="50px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 611.999 611.999" xml:space="preserve">
@@ -217,22 +197,15 @@
             </a>
         </ul>
     </nav>
-    <div class="content">
-        <div class="btn-group" role="group" aria-label="...">
-        <a href="aboutme.html"><button type="button" class="btn btn-outline-light btn-xl btn-spacin">About</button></a>
-        <a href="blog.html"><button type="button" class="btn btn-outline-light btn-xl btn-spacin" >Blog</button></a>
-        <a href="reviews.html"><button type="button" class="btn btn-outline-light btn-xl">Reviews</button></a>
-        </div>
-    </div>
+    <div class="content"></div>
     <footer class="footer">
         <div class="footer-line"></div>
         <ul class="menu">
-            <li class="menu__item"><a class="menu__link" href="gfx.html">Home</a></li>    
+            <li class="menu__item"><a class="menu__link" href="gfx.php">Home</a></li>    
             <li class="menu__item"><a class="menu__link" href="linktr.ee/kvdzi">Linktree</a></li>
-            <li class="menu__item"><a class="menu__link" href="contact.html">Contact</a></li>
+            <li class="menu__item"><a class="menu__link" href="contact.php">Contact</a></li>
         </ul>
         <p>&copy;2024 | kvdzi</p>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

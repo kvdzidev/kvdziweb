@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Landing</title>
     <style>
         * {
@@ -18,6 +19,12 @@
         }
         .content {
             flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            margin-bottom: 130px;
         }
         nav {
             background-color: black;
@@ -33,9 +40,6 @@
         a:hover {
             color: #0bffef;
         }
-        .boxed a:hover {
-            color: #0bffef;
-        } 
         ul {
             list-style-type: none; 
             display: flex;
@@ -45,8 +49,10 @@
         }
         li {
             margin-right: 40px;
+            padding-top: 26px;
+            font-weight: bold;
         }
-        h3, .czcionka {
+        h3 {
             font-size: 28px;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             margin: 0;
@@ -91,7 +97,7 @@
             fill: #0bffef;
             transition: color 0.3s;
         }
-        #grx {
+        #abt {
             color: #6561eb;
         }
         .footer {
@@ -139,11 +145,25 @@
             background-color: white;
             margin-bottom: 10px;
         }
+        #toast1 {
+            margin-bottom: 20px;
+        }
+        #toast2 {
+            margin-bottom: 20px;
+        }
+        #tss {
+            color: white;
+            margin-bottom: 40px;
+        }
+        #dhov:hover{
+            color: black;
+            background-color: white;
+        }
     </style>
 </head>
 <body>
     <nav>
-        <ul>
+    <ul>
             <li>
                 <h3>
                     <div class="search-page">
@@ -155,13 +175,13 @@
                     </div>
                 </h3>
             </li>
-            <a id="grx" href="gfx.html"><li><h3>BANNERS</h3></li></a>
-            <a id="edit" href="editing.html"><li><h3>EDITING</h3></li></a>
-            <a id="wrt" href="writing.html"><li><h3>WRITING</h3></li></a>
-            <a id="prg" href="programming.html"><li><h3>PROGRAMMING</h3></li></a>
-            <a id="abt" href="about.html"><li><h3>ABOUT ME</h3></li></a>
-            <a id="cont" href="contact.html"><li><h3>CONTACT</h3></li></a>
-            <a id="noti" href="notif.html">
+            <a id="grx" href="gfx.php"><li><h3>GRAPHICS</h3></li></a>
+            <a id="edit" href="editing.php"><li><h3>EDITING</h3></li></a>
+            <a id="wrt" href="writing.php"><li><h3>WRITING</h3></li></a>
+            <a id="prg" href="programming.php"><li><h3>PROGRAMMING</h3></li></a>
+            <a id="abt" href="about.php"><li><h3>REVIEWS</h3></li></a>
+            <a id="cont" href="contact.php"><li><h3>CONTACT</h3></li></a>
+            <a id="noti" href="notif.php">
                 <li>
                     <h3>
                         <svg id="notif" fill="#ffffff" height="50px" width="50px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 611.999 611.999" xml:space="preserve">
@@ -189,7 +209,7 @@
                     </h3>
                 </li>
             </a>
-            <a href="login.html">
+            <a href="login.php">
                 <li>
                     <h3>
                         <svg id="icona" fill="#ffffff" width="50px" height="50px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -203,17 +223,40 @@
             </a>
         </ul>
     </nav>
-
-
-    <div class="content"></div>
+    <div class="content">
+        <h2 id="tss">Here you can find some of my reviews!<br></h2>
+        <div id="reviews">
+            <?php include 'load_reviews.php'; ?>
+        </div>
+        <h2 id="tss">Also feel free to leave here one of yours!</h2>
+        <form id="reviewForm" class="mt-4" action="submit_review.php" method="POST">
+            <div class="mb-3">
+                <input type="text" id="name" name="name" class="form-control" placeholder="Your nickname" required>
+            </div>
+            <div class="mb-3">
+                <textarea id="review" name="review" class="form-control" rows="3" placeholder="Your Review" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-dark" id="dhov">Send Review</button>
+        </form>
+    </div>
     <footer class="footer">
-        <div class="footer-line"></div>
+    <div class="footer-line"></div>
         <ul class="menu">
-            <li class="menu__item"><a class="menu__link" href="gfx.html">Home</a></li>    
+            <li class="menu__item"><a class="menu__link" href="gfx.php">Home</a></li>    
             <li class="menu__item"><a class="menu__link" href="linktr.ee/kvdzi">Linktree</a></li>
-            <li class="menu__item"><a class="menu__link" href="contact.html">Contact</a></li>
+            <li class="menu__item"><a class="menu__link" href="contact.php">Contact</a></li>
         </ul>
         <p>&copy;2024 | kvdzi</p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var toasts = document.querySelectorAll('.toast');
+            toasts.forEach(function(toastEl) {
+                var toast = new bootstrap.Toast(toastEl);
+                toast.show();
+            });
+        });
+    </script>
 </body>
 </html>

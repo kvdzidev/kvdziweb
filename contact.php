@@ -187,13 +187,13 @@
                     </div>
                 </h3>
             </li>
-            <a id="grx" href="gfx.html"><li><h3>GRAPHICS</h3></li></a>
-            <a id="edit" href="editing.html"><li><h3>EDITING</h3></li></a>
-            <a id="wrt" href="writing.html"><li><h3>WRITING</h3></li></a>
-            <a id="prg" href="programming.html"><li><h3>PROGRAMMING</h3></li></a>
-            <a id="abt" href="about.html"><li><h3>ABOUT ME</h3></li></a>
-            <a id="cont" href="contact.html"><li><h3>CONTACT</h3></li></a>
-            <a id="noti" href="notif.html">
+            <a id="grx" href="gfx.php"><li><h3>GRAPHICS</h3></li></a>
+            <a id="edit" href="editing.php"><li><h3>EDITING</h3></li></a>
+            <a id="wrt" href="writing.php"><li><h3>WRITING</h3></li></a>
+            <a id="prg" href="programming.php"><li><h3>PROGRAMMING</h3></li></a>
+            <a id="abt" href="about.php"><li><h3>ABOUT ME</h3></li></a>
+            <a id="cont" href="contact.php"><li><h3>CONTACT</h3></li></a>
+            <a id="noti" href="notif.php">
                 <li>
                     <h3>
                         <svg id="notif" fill="#ffffff" height="50px" width="50px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 611.999 611.999" xml:space="preserve">
@@ -241,7 +241,7 @@
         <p>You have a bigger project and want to discuss it? Or maybe, you have any other questions?</p>
         <p>Leave your email here, and I'll contact you!</p>
         <br>
-        <form method="post" action="">
+        <form method="post" action="submit_form.php">
             <label id="shd">Your Project:</label><br>
             <input type="text" name="projectt" required><br><br>
             <label id="shd">Your email:</label><br>
@@ -250,12 +250,13 @@
         </form><br>
         <p>If you are in a hurry you can try contacting me on discord: </p>
         <p class="fontin" id="shd"><a href="https://discordapp.com/users/487231285174075392">kvdzi</a></p>
-        <p>I mostly respond within 48h <br><?php
+        <p>I mostly respond within 48h <br>
+        <?php
             $data = getdate();
             $dzien = $data["mday"];
             $miesiac = $data["mon"];
             $rok = $data["year"];
-            echo "Today is: $dzien/$miesiac/$rok ";
+            echo "Today we have: $dzien/$miesiac/$rok ";
         ?></p>
 
     </div>
@@ -276,9 +277,9 @@
     <footer class="footer">
         <div class="footer-line"></div>
         <ul class="menu">
-            <li class="menu__item"><a class="menu__link" href="gfx.html">Home</a></li>    
+            <li class="menu__item"><a class="menu__link" href="gfx.php">Home</a></li>    
             <li class="menu__item"><a class="menu__link" href="linktr.ee/kvdzi">Linktree</a></li>
-            <li class="menu__item"><a class="menu__link" href="contact.html">Contact</a></li>
+            <li class="menu__item"><a class="menu__link" href="contact.php">Contact</a></li>
         </ul>
         <p>&copy;2024 | kvdzi</p>
     </footer>

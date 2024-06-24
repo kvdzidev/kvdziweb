@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Landing</title>
     <style>
         * {
@@ -19,21 +18,10 @@
         }
         .content {
             flex: 1;
-            display: flex;
-            align-items: center;
-            text-align: center;
-            justify-content: center;
-            margin-bottom: 130px;
-            gap: 50px;
-            margin-top: 130px;
-            font-size: medium;
-            color: black;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
         nav {
             background-color: black;
             position: relative;
-
         }
         a {
             color: white;
@@ -45,6 +33,9 @@
         a:hover {
             color: #0bffef;
         }
+        .boxed a:hover {
+            color: #0bffef;
+        } 
         ul {
             list-style-type: none; 
             display: flex;
@@ -54,10 +45,8 @@
         }
         li {
             margin-right: 40px;
-            padding-top: 26px;
-            font-weight: bold;
         }
-        h3 {
+        h3, .czcionka {
             font-size: 28px;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             margin: 0;
@@ -102,7 +91,7 @@
             fill: #0bffef;
             transition: color 0.3s;
         }
-        #abt {
+        #grx {
             color: #6561eb;
         }
         .footer {
@@ -150,20 +139,6 @@
             background-color: white;
             margin-bottom: 10px;
         }
-        #roundo{
-            border-radius: 230px;
-            box-shadow: 1px 1px 15px rgb(114, 114, 114);
-        }
-        #cc{
-            color: black;
-        }
-        #cc:hover{
-            color: rgb(229, 80, 80);
-        }
-        #headingOne{
-            background-color: rgb(49, 42, 42);
-            color: rgb(49, 42, 42);;
-        }
     </style>
 </head>
 <body>
@@ -180,13 +155,13 @@
                     </div>
                 </h3>
             </li>
-            <a id="grx" href="gfx.html"><li><h3>GRAPHICS</h3></li></a>
-            <a id="edit" href="editing.html"><li><h3>EDITING</h3></li></a>
-            <a id="wrt" href="writing.html"><li><h3>WRITING</h3></li></a>
-            <a id="prg" href="programming.html"><li><h3>PROGRAMMING</h3></li></a>
-            <a id="abt" href="about.html"><li><h3>ABOUT ME</h3></li></a>
-            <a id="cont" href="contact.html"><li><h3>CONTACT</h3></li></a>
-            <a id="noti" href="notif.html">
+            <a id="grx" href="gfx.php"><li><h3>BANNERS</h3></li></a>
+            <a id="edit" href="editing.php"><li><h3>EDITING</h3></li></a>
+            <a id="wrt" href="writing.php"><li><h3>WRITING</h3></li></a>
+            <a id="prg" href="programming.php"><li><h3>PROGRAMMING</h3></li></a>
+            <a id="abt" href="about.php"><li><h3>ABOUT ME</h3></li></a>
+            <a id="cont" href="contact.php"><li><h3>CONTACT</h3></li></a>
+            <a id="noti" href="notif.php">
                 <li>
                     <h3>
                         <svg id="notif" fill="#ffffff" height="50px" width="50px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 611.999 611.999" xml:space="preserve">
@@ -228,41 +203,17 @@
             </a>
         </ul>
     </nav>
-    <div class="content">
-        <div>
-            <img id=roundo src="redeye.jpg" style="width: 500px; height: 500px;">
-        </div>
 
-     <div class="accordion" id="accordionExample">
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingOne">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                      My history
-                </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                    Hello there, my name is Jacek, and I've been in love with IT since the youngest years.<br> 
-                    At the beginning I've extremely enjoyed playing games, <br>later - more of creating them - the "behind" the scenes of IT. <br>
-                    I've started with graphics design and video editing back in 2016 in camtasia studio and gimp! <br>
-                    It's been a long adventure since then, where I had the opportunity to work with audio mixing, <br>
-                    writing content, creating youtube videos, making translations, creating simple websites, <br>
-                    writing basic scripts, playing semi-pro, <br>creating and moderating huge discord servers, just like big teamspeak communities, and a lot lot more!<br>
-                    <a href='contact.php' id="cc">Learn more</a>
-                </div>
-                </div>
-        </div>
-        </div>
-    </div>
+
+    <div class="content"></div>
     <footer class="footer">
         <div class="footer-line"></div>
         <ul class="menu">
-            <li class="menu__item"><a class="menu__link" href="gfx.html">Home</a></li>    
+            <li class="menu__item"><a class="menu__link" href="gfx.php">Home</a></li>    
             <li class="menu__item"><a class="menu__link" href="linktr.ee/kvdzi">Linktree</a></li>
-            <li class="menu__item"><a class="menu__link" href="contact.html">Contact</a></li>
+            <li class="menu__item"><a class="menu__link" href="contact.php">Contact</a></li>
         </ul>
         <p>&copy;2024 | kvdzi</p>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

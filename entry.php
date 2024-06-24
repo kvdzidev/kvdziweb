@@ -98,7 +98,7 @@
 <body>
 <a>
     <div class="container" id="myDiv">
-        <a href="gfx.html">
+        <a href="gfx.php">
           <button>
             <img src="https://www.pngall.com/wp-content/uploads/15/Hand-Cursor-Transparent.png" alt="SVG Icon Click">
           </button>

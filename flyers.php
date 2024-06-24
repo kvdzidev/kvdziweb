@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Landing</title>
     <style>
         * {
@@ -19,16 +18,10 @@
         }
         .content {
             flex: 1;
-            display: flex;
-            align-items: center;
-            text-align: center;
-            justify-content: center;
-            margin-bottom: 130px;
         }
         nav {
             background-color: black;
             position: relative;
-
         }
         a {
             color: white;
@@ -40,6 +33,9 @@
         a:hover {
             color: #0bffef;
         }
+        .boxed a:hover {
+            color: #0bffef;
+        } 
         ul {
             list-style-type: none; 
             display: flex;
@@ -49,10 +45,8 @@
         }
         li {
             margin-right: 40px;
-            padding-top: 26px;
-            font-weight: bold;
         }
-        h3 {
+        h3, .czcionka {
             font-size: 28px;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             margin: 0;
@@ -97,7 +91,7 @@
             fill: #0bffef;
             transition: color 0.3s;
         }
-        #abt {
+        #grx {
             color: #6561eb;
         }
         .footer {
@@ -145,7 +139,6 @@
             background-color: white;
             margin-bottom: 10px;
         }
-
     </style>
 </head>
 <body>
@@ -162,11 +155,11 @@
                     </div>
                 </h3>
             </li>
-            <a id="grx" href="gfx.html"><li><h3>GRAPHICS</h3></li></a>
+            <a id="grx" href="gfx.php"><li><h3>FLYERS</h3></li></a>
             <a id="edit" href="editing.html"><li><h3>EDITING</h3></li></a>
             <a id="wrt" href="writing.html"><li><h3>WRITING</h3></li></a>
             <a id="prg" href="programming.html"><li><h3>PROGRAMMING</h3></li></a>
-            <a id="abt" href="about.html"><li><h3>BLOG</h3></li></a>
+            <a id="abt" href="about.html"><li><h3>ABOUT ME</h3></li></a>
             <a id="cont" href="contact.html"><li><h3>CONTACT</h3></li></a>
             <a id="noti" href="notif.html">
                 <li>
@@ -210,9 +203,9 @@
             </a>
         </ul>
     </nav>
-    <div class="content">
 
-    </div>
+
+    <div class="content"></div>
     <footer class="footer">
         <div class="footer-line"></div>
         <ul class="menu">
@@ -222,6 +215,5 @@
         </ul>
         <p>&copy;2024 | kvdzi</p>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

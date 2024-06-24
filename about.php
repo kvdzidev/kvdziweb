@@ -3,11 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Landing</title>
     <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: rgb(47, 46, 46);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            margin-bottom: 130px;
+        }
         nav {
             background-color: black;
             position: relative;
+
         }
         a {
             color: white;
@@ -28,6 +49,8 @@
         }
         li {
             margin-right: 40px;
+            padding-top: 26px;
+            font-weight: bold;
         }
         h3 {
             font-size: 28px;
@@ -41,11 +64,9 @@
             transform: translateY(-50%); 
             margin-left: 40px;
         }
-
         .search-container {
             width: 60%;
         }
-
         .search-input {
             width: 100%;
             padding: 10px;
@@ -54,7 +75,6 @@
             border-radius: 25px;
             box-sizing: border-box;
         }
-
         #icona {
             position: absolute;
             right: 0;
@@ -69,9 +89,69 @@
             transform: translateY(-50%); 
             margin-right: 120px; 
         }
-
-        #noti{
+        #notif:hover {
+            fill: #0bffef;
+            transition: color 0.3s;
+        }
+        #icona:hover {
+            fill: #0bffef;
+            transition: color 0.3s;
+        }
+        #abt {
             color: #6561eb;
+        }
+        .footer {
+            width: 100%;
+            background-color: rgb(47, 46, 46);
+            padding: 20px 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0;
+        }
+        .menu__item {
+            list-style: none;
+            margin: 0 15px;
+        }
+        .menu__link {
+            font-size: 1.2rem;
+            color: #fff;
+            display: inline-block;
+            transition: color 0.3s;
+            text-decoration: none;
+            opacity: 0.75;
+            font-weight: 300;
+        }
+        .menu__link:hover {
+            opacity: 1;
+            color: #ffffff;
+        }
+        .footer p {
+            color: #fff;
+            margin: 8px 0 0 0;
+            font-size: 1rem;
+            font-weight: 300;
+            text-align: center;
+        }
+        .footer-line {
+            width: 100%;
+            opacity: 150%;
+            height: 1px;
+            background-color: white;
+            margin-bottom: 10px;
+        }
+        .btn-xl {
+            padding: 3rem 6rem; 
+            font-size: 4rem;
+            border-radius: 1rem; 
+        }
+        .btn-spacin {
+            margin-right: 5px;
         }
     </style>
 </head>
@@ -80,7 +160,6 @@
         <ul>
             <li>
                 <h3>
-                    <!--make some backend php!!!-->
                     <div class="search-page">
                         <div class="search-container">
                             <form action="search_results.php" method="get">
@@ -90,16 +169,16 @@
                     </div>
                 </h3>
             </li>
-            <a id="grx" href="gfx.html"><li><h3>GRAPHICS</h3></li></a>
-            <a id="edit" href="editing.html"><li><h3>EDITING</h3></li></a>
-            <a id="wrt" href="writing.html"><li><h3>WRITING</h3></li></a>
-            <a id="prg" href="programming.html"><li><h3>PROGRAMMING</h3></li></a>
-            <a id="abt" href="about.html"><li><h3>ABOUT ME</h3></li></a>
-            <a id="cont" href="contact.html"><li><h3>CONTACT</h3></li></a>
-            <a id="noti" href="notif.html">
+            <a id="grx" href="gfx.php"><li><h3>GRAPHICS</h3></li></a>
+            <a id="edit" href="editing.php"><li><h3>EDITING</h3></li></a>
+            <a id="wrt" href="writing.php"><li><h3>WRITING</h3></li></a>
+            <a id="prg" href="programming.php"><li><h3>PROGRAMMING</h3></li></a>
+            <a id="abt" href="about.php"><li><h3>ABOUT ME</h3></li></a>
+            <a id="cont" href="contact.php"><li><h3>CONTACT</h3></li></a>
+            <a id="noti" href="notif.php">
                 <li>
                     <h3>
-                        <svg id="notif" fill="#ffffff" height="50px" width="50px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 611.999 611.999" xml:space="preserve">
+                        <svg id="notif" fill="#ffffff" height="50px" width="50px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 611.999 611.999" xml:space="preserve">
                             <g>
                                 <g>
                                     <g>
@@ -124,18 +203,36 @@
                     </h3>
                 </li>
             </a>
-            <a href="login.html">
+            <a href="login.php">
                 <li>
                     <h3>
-                        <svg id="icona" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 67 67" width="50" height="50">
-                            <g transform="translate(0.000000,67.000000) scale(0.100000,-0.100000)" fill="none" stroke="#ffffff" stroke-width="36">
-                                <path d="M270 637 c-13 -7 -35 -28 -48 -47 -20 -29 -23 -44 -19 -89 3 -47 9 -59 40 -88 20 -18 30 -33 23 -33 -29 0 -80 -56 -111 -122 -42 -86 -52 -155 -31 -196 24 -47 56 -54 226 -50 l152 3 25 29 c22 26 25 36 20 85 -9 96 -83 229 -138 246 -18 6 -18 8 10 34 61 57 59 151 -3 209 -29 26 -44 32 -78 32 -24 0 -54 -6 -68 -13z"/>
-                            </g>
-                        </svg>
+                        <svg id="icona" fill="#ffffff" width="50px" height="50px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <circle fill="none" cx="12" cy="7" r="3"/>
+                            <path d="M12 2C9.243 2 7 4.243 7 7s2.243 5 5 5 5-2.243 5-5-2.243-5-5-5zm0 8c-1.654 
+                            0-3-1.346-3-3s1.346-3 3-3 3 1.346 3 3-1.346 3-3 3zm9 11v-1c0-3.859-3.141-7-7-7h-4c-3.86
+                            0-7 3.141-7 7v1h2v-1c0-2.757 2.243-5 5-5h4c2.757 0 5 2.243 5 5v1h2z"/>
+                            </svg>
                     </h3>
                 </li>
             </a>
         </ul>
     </nav>
+    <div class="content">
+        <div class="btn-group" role="group" aria-label="...">
+        <a href="aboutme.php"><button type="button" class="btn btn-outline-light btn-xl btn-spacin">About</button></a>
+        <a href="blog.php"><button type="button" class="btn btn-outline-light btn-xl btn-spacin" >Blog</button></a>
+        <a href="reviews.php"><button type="button" class="btn btn-outline-light btn-xl">Reviews</button></a>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-line"></div>
+        <ul class="menu">
+            <li class="menu__item"><a class="menu__link" href="gfx.php">Home</a></li>    
+            <li class="menu__item"><a class="menu__link" href="linktr.ee/kvdzi">Linktree</a></li>
+            <li class="menu__item"><a class="menu__link" href="contact.php">Contact</a></li>
+        </ul>
+        <p>&copy;2024 | kvdzi</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
